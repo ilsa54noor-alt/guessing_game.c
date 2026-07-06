@@ -1,35 +1,12 @@
-include<stdio.h>
-include<stdlib.h>
-include<time.h>
+# Number Guessing Game (C)
+A simple number guessing game written in C.
 
-int main()
-{
-    printf("NUMBER GUESSING GAME\n");
-    printf("Guess a number between 1 and 100\n");
-    srand(time(0));
-    int random_number = (rand()%100) + 1;
-    int guessed_number;
-    int no_of_guesses = 0;
+## How it works
+- The program generates a random number between 1 and 100.
+- The user guesses repeatedly.
+- The program tells you if your guess is too high or too low, until you get it right.
 
-    do
-    {
-        printf("Enter your guess=\n");
-        scanf("%d",&guessed_number);
-        no_of_guesses++;
-
-        if(guessed_number<random_number){
-            printf("Too low — guess higher\n");
-        }
-        else if(guessed_number>random_number){
-            printf("Too high — guess lower\n");
-        }
-        else{
-            printf("congrats🎉🎉\n");
-        }
-    }
-    while(guessed_number != random_number);
-
-    printf("Number of guesses =%d\n",no_of_guesses);
-
-    return 0;
-}
+## Concepts used
+- Random number generation (`rand()`, `srand()`)
+- Loops (`do...while`)
+- Conditionals (`if / else if`)
